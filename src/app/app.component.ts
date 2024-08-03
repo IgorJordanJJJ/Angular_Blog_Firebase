@@ -1,4 +1,14 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
+
+export interface Post {
+  id?: number,
+  uuid: string,
+  title: string,
+  author: string,
+  content: string,
+  createdAt: string,
+  updatedAt: string,
+}
 
 @Component({
   selector: 'app-root',
@@ -6,5 +16,5 @@ import { Component } from '@angular/core';
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = 'Front';
+
 }
