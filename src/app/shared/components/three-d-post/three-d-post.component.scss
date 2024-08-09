@@ -1,0 +1,78 @@
+
+.card-container {
+  perspective: 1000px;
+  margin: 20px;
+}
+
+.card {
+  width: 200px;
+  height: 300px;
+  padding: 20px;
+  border-radius: 10px;
+  background: linear-gradient(180deg, #ff7e5f 0%, #feb47b 100%); /* Gradient background */
+  color: white;
+  position: relative;
+  overflow: hidden;
+  transform-origin: left top;
+  transform-style: preserve-3d;
+  transition: transform 0.6s, box-shadow 0.6s;
+  box-shadow: 0px 0px 70px -21px rgba(139,242,206,1);
+}
+
+.card.red {
+  background: linear-gradient(180deg, #ff6f61 0%, #d33f49 100%);
+}
+
+.card.green {
+  background: linear-gradient(180deg, #38ef7d 0%, #11998e 100%);
+}
+
+.card:hover {
+  transform: rotate3d(1, 1, 0, 15deg) translateY(-20px);
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.5);
+}
+
+.card .date,
+.card .title,
+.card .description,
+.card .more {
+  transition: transform 0.3s, text-shadow 0.3s;
+}
+
+.card:hover .date,
+.card:hover .title,
+.card:hover .description,
+.card:hover .more {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+  transform: rotate3d(1, 1, 0, 15deg) translateZ(30px);
+}
+
+.card .date {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 5px 10px;
+  border-radius: 5px;
+  display: inline-block;
+}
+
+.card .title {
+  margin: 20px 0 10px;
+  font-size: 1.5em;
+}
+
+.card .description {
+  font-size: 1em;
+}
+
+.card .more {
+  position: absolute;
+  bottom: 20px;
+  text-decoration: none;
+  color: white;
+  border-bottom: 1px solid white;
+  font-weight: bold;
+}
+
+.card .more:hover {
+  color: #ffd700; /* Golden color for hover */
+  border-bottom: 1px solid #ffd700;
+}

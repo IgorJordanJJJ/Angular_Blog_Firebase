@@ -1,0 +1,10 @@
+<div class="card-container">
+  <div class="card green">
+    <div class="card-content">
+      <div class="date">{{ post.date | date:'MMMM dd' }}</div>
+      <h2 class="title">{{ post.title }}</h2>
+      <p class="description">{{ post.author }}</p>
+      <a [routerLink]="['/post', post.id]" class="more">Open</a>
+    </div>
+  </div>
+</div>
